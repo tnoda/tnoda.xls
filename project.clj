@@ -1,6 +1,6 @@
-(defproject org.clojars.tnoda/tnoda.xls "0.1.0"
+(defproject org.clojars.tnoda/tnoda.xls "0.1.1"
   :description "A tiny library to read Excel sheets."
-  :url "http://gitub.com/tnoda/tnoda.xls"
+  :url "https://github.com/tnoda/tnoda.xls"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]

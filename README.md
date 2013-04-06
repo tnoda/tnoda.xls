@@ -11,7 +11,7 @@ supports BIFF8 format (from Excel versions 97/2000/XP/2003).
 
 Leiningen dependency information:
 
-    [org.clojars.tnoda/tnoda.xls "0.1.0"]
+    [org.clojars.tnoda/tnoda.xls "0.1.1"]
 
 
 ## Example
