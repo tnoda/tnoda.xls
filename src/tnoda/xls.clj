@@ -49,8 +49,8 @@ sheet number of the sheet name. If idx is omitted, it is set to be
 zero."
   ([^FileInputStream fis]
      (read-sheet fis 0))
-  ([^FileInputStream is idx]
-     (let [sheet (-> is POIFSFileSystem. HSSFWorkbook. (sheet idx))]
+  ([^FileInputStream fis idx]
+     (let [sheet (-> fis POIFSFileSystem. HSSFWorkbook. (sheet idx))]
        (->> sheet
             .rowIterator
             iterator-seq
