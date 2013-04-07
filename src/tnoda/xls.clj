@@ -2,7 +2,7 @@
   (:import (org.apache.poi.ss.usermodel Cell Row)
            (org.apache.poi.poifs.filesystem POIFSFileSystem)
            (org.apache.poi.hssf.usermodel HSSFWorkbook HSSFSheet)
-           (java.io FileInputStream)))
+           (java.io InputStream)))
 
 (defn- cell-type
   [^Cell cell]
@@ -47,9 +47,9 @@ Each row is represented as a lazy seq of cells. If a cell is either
 empty or blank, its value will be nil. idx should be either the
 sheet number of the sheet name. If idx is omitted, it is set to be
 zero."
-  ([^FileInputStream fis]
+  ([^InputStream fis]
      (read-sheet fis 0))
-  ([^FileInputStream fis idx]
+  ([^InputStream fis idx]
      (let [sheet (-> fis POIFSFileSystem. HSSFWorkbook. (sheet idx))]
        (->> sheet
             .rowIterator
